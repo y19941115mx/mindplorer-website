@@ -3,7 +3,7 @@
   "followSystemTheme": true,
   "layout": {
     "minWidth": 900,
-    "mode": "vertical",
+    "mode": "vertical-mix",
     "modeList": [
       {
         "value": "vertical",
@@ -23,7 +23,7 @@
       }
     ]
   },
-  "themeColor": "#1890ff",
+  "themeColor": "#43a047",
   "themeColorList": [
     "#1890ff",
     "#409EFF",
@@ -51,25 +51,25 @@
     "#546e7a"
   ],
   "otherColor": {
-    "info": "#0099ad",
+    "info": "#096dd9",
     "success": "#52c41a",
     "warning": "#faad14",
     "error": "#f5222d"
   },
   "isCustomizeInfoColor": false,
-  "fixedHeaderAndTab": true,
+  "fixedHeaderAndTab": false,
   "showReload": true,
   "header": {
     "inverted": false,
-    "height": 56,
+    "height": 50,
     "crumb": {
-      "visible": true,
-      "showIcon": true
+      "visible": false,
+      "showIcon": false
     }
   },
   "tab": {
-    "visible": true,
-    "height": 44,
+    "visible": false,
+    "height": 20,
     "mode": "chrome",
     "modeList": [
       {
@@ -85,9 +85,9 @@
   },
   "sider": {
     "inverted": false,
-    "width": 220,
+    "width": 150,
     "collapsedWidth": 64,
-    "mixWidth": 80,
+    "mixWidth": 130,
     "mixCollapsedWidth": 48,
     "mixChildMenuWidth": 200
   },
@@ -113,8 +113,8 @@
     "height": 48
   },
   "page": {
-    "animate": true,
-    "animateMode": "fade-slide",
+    "animate": false,
+    "animateMode": "zoom-out",
     "animateModeList": [
       {
         "value": "fade-slide",

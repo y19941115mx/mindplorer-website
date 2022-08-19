@@ -5,7 +5,7 @@ type ServiceEnv = Record<ServiceEnvType, ServiceEnvConfig>;
 const serviceEnv: ServiceEnv = {
   dev: {
     url: 'http://localhost:8080',
-    urlPattern: '/url-pattern',
+    urlPattern: '/url-pattern', // 随便设置，因为开启代理时 urlpattern会被替换，关闭代理时 urlpattern设置无效 url地址作为请求的根地址
     secondUrl: 'http://localhost:8081',
     secondUrlPattern: '/second-url-pattern'
   },
