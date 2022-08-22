@@ -17,7 +17,7 @@ export default defineConfig({
     'i-flex-col': 'inline-flex flex-col',
     'i-flex-col-stretch': 'i-flex-col items-stretch',
     'flex-1-hidden': 'flex-1 overflow-hidden',
-    'padding-content': 'pl80 pr80',
+    'padding-content': 'pl40 pr40',
     'absolute-lt': 'absolute left-0 top-0',
     'absolute-lb': 'absolute left-0 bottom-0',
     'absolute-rt': 'absolute right-0 top-0',

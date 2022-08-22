@@ -1,7 +1,9 @@
 <template>
-  <span>{{ props.prefix }} &nbsp;</span>
-  <span :style="{ color: props.activeColor }">{{ value }}</span>
-  <span>&nbsp;{{ props.suffix }}</span>
+  <div>
+    <span>{{ props.prefix }} &nbsp;</span>
+    <span :style="{ color: props.activeColor }">{{ value }}</span>
+    <span>&nbsp;{{ props.suffix }}</span>
+  </div>
 </template>
 <script lang="ts" setup>
 import { computed, onMounted, ref, watch, watchEffect } from 'vue';

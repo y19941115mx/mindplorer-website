@@ -20,7 +20,7 @@ defineOptions({ name: 'SettingDrawer' });
 
 const app = useAppStore();
 
-const showButton = import.meta.env.CONFIG_BUTTON;
+const showButton = import.meta.env.CONFIG_BUTTON === 'Y';
 </script>
 
 <style scoped></style>

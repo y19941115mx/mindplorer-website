@@ -52,7 +52,7 @@ defineProps<Props>();
 const theme = useThemeStore();
 const { isMobile } = useBasicLayout();
 
-const showButton = import.meta.env.CONFIG_BUTTON;
+const showButton = import.meta.env.CONFIG_BUTTON === 'Y';
 
 const { VITE_APP_TITLE: title } = import.meta.env;
 </script>

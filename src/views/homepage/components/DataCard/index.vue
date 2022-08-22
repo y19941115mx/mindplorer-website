@@ -2,23 +2,23 @@
   <n-grid cols="s:1 m:2 l:3" responsive="screen" :x-gap="50" :y-gap="15">
     <n-grid-item v-for="item in cardData" :key="item.id">
       <gradient-bg>
-        <div class="flex justify-between">
-          <div class="flex-col justify-around pl-25px">
-            <h3 class="text-20px">{{ item.title }}</h3>
-            <div v-for="(row, index) in item.value" :key="index" class="pt-15px">
-              <count-to
-                :prefix="item.prefix[index]"
-                active-color="red"
-                suffix="万"
-                :start-value="1"
-                :end-value="row"
-                class="text-dark dark:text-dark"
-              />
-            </div>
+        <div class="flex justify-start">
+          <div class="flex-center">
+            <Icon :icon="item.icon" :style="{ fontSize: '80px', color: theme.themeColor }" />
           </div>
           <div class="flex-1-hidden">
-            <div class="flex-center h-full">
-              <Icon :icon="item.icon" :style="{ fontSize: '80px', color: theme.themeColor }" />
+            <div class="flex-col justify-around pl-25px">
+              <h3 class="text-20px">{{ item.title }}</h3>
+              <div v-for="(row, index) in item.value" :key="index" class="pt-15px">
+                <count-to
+                  :prefix="item.prefix[index]"
+                  active-color="red"
+                  suffix="万"
+                  :start-value="1"
+                  :end-value="row"
+                  class="text-dark dark:text-dark"
+                />
+              </div>
             </div>
           </div>
         </div>
