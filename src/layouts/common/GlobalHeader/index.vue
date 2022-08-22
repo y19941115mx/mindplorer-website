@@ -2,13 +2,14 @@
   <dark-mode-container class="global-header flex-y-center h-full" :inverted="theme.header.inverted">
     <global-logo v-if="showLogo" :show-title="true" class="h-full" :style="{ width: theme.sider.width + 'px' }" />
     <div v-if="!showHeaderMenu" class="flex-1-hidden flex-y-center h-full">
+      <p class="header-desc pl-5">{{ title }}</p>
       <menu-collapse v-if="showMenuCollapse || isMobile" />
       <global-breadcrumb v-if="theme.header.crumb.visible && !isMobile" />
     </div>
     <header-menu v-else />
     <div class="flex justify-end h-full">
       <global-search />
-      <github-site />
+      <!-- <github-site /> -->
       <full-screen />
       <theme-mode />
       <system-message />
@@ -25,7 +26,7 @@ import GlobalLogo from '../GlobalLogo/index.vue';
 import GlobalSearch from '../GlobalSearch/index.vue';
 import {
   FullScreen,
-  GithubSite,
+  // GithubSite,
   GlobalBreadcrumb,
   HeaderMenu,
   MenuCollapse,
@@ -52,10 +53,21 @@ const theme = useThemeStore();
 const { isMobile } = useBasicLayout();
 
 const showButton = import.meta.env.CONFIG_BUTTON;
+
+const { VITE_APP_TITLE: title } = import.meta.env;
 </script>
 
 <style scoped>
 .global-header {
   box-shadow: 0 1px 2px rgb(0 21 41 / 8%);
+}
+.header-desc {
+  height: 36px;
+  border-radius: 0px;
+  font-size: 20px;
+  font-family: Microsoft YaHei, Microsoft YaHei-Bold;
+  font-weight: normal;
+  text-align: LEFT;
+  color: #009a61;
 }
 </style>

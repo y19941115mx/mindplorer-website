@@ -1,5 +1,7 @@
 <template>
-  <span>{{ value }}</span>
+  <span>{{ props.prefix }} &nbsp;</span>
+  <span :style="{ color: props.activeColor }">{{ value }}</span>
+  <span>&nbsp;{{ props.suffix }}</span>
 </template>
 <script lang="ts" setup>
 import { computed, onMounted, ref, watch, watchEffect } from 'vue';
@@ -29,6 +31,7 @@ interface Props {
   separator?: string;
   /** 小数点 */
   decimal?: string;
+  activeColor?: string;
   /** 使用缓冲动画函数 */
   useEasing?: boolean;
   /** 缓冲动画函数类型 */
@@ -41,6 +44,7 @@ const props = withDefaults(defineProps<Props>(), {
   duration: 1500,
   autoplay: true,
   decimals: 0,
+  activeColor: 'white',
   prefix: '',
   suffix: '',
   separator: ',',
@@ -80,7 +84,7 @@ function formatNumber(num: number | string) {
   if (!num) {
     return '';
   }
-  const { decimals, decimal, separator, suffix, prefix } = props;
+  const { decimals, decimal, separator } = props;
   let number = Number(num).toFixed(decimals);
   number += '';
 
@@ -93,7 +97,7 @@ function formatNumber(num: number | string) {
       x1 = x1.replace(rgx, `$1${separator}$2`);
     }
   }
-  return prefix + x1 + x2 + suffix;
+  return x1 + x2;
 }
 
 watch([() => props.startValue, () => props.endValue], () => {
@@ -113,4 +117,8 @@ onMounted(() => {
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+span {
+  font-size: medium;
+}
+</style>

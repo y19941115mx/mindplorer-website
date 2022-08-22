@@ -14,6 +14,7 @@ declare namespace AuthRoute {
     | 'not-found-page' // 捕获无效path的路由
     // 自定义路由
     | 'dashboard'
+    | 'homepage' // 首页
     | 'dashboard_analysis'
     | 'dashboard_workbench'
     | 'document'
