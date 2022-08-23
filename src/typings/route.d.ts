@@ -16,6 +16,7 @@ declare namespace AuthRoute {
     | 'dashboard'
     | 'homepage' // 首页
     | 'listpage' // 列表页
+    | 'detailpage' // 列表页
     | 'dashboard_analysis'
     | 'dashboard_workbench'
     | 'document'
