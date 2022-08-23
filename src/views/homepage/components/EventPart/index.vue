@@ -10,6 +10,11 @@
           <EventItem></EventItem>
         </n-space>
       </n-grid-item>
+      <n-grid-item>
+        <n-space v-for="i in [1, 2, 3, 5]" :key="i" :vertical="true" size="large">
+          <EventItem></EventItem>
+        </n-space>
+      </n-grid-item>
     </n-grid>
   </div>
 </template>
