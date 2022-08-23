@@ -16,7 +16,7 @@ export const useAppStore = defineStore('app-store', {
   state: (): AppState => ({
     reloadFlag: true,
     settingDrawerVisible: false,
-    siderCollapse: false,
+    siderCollapse: true,
     mixSiderFixed: false
   }),
   actions: {

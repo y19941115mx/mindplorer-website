@@ -3,7 +3,7 @@
   "followSystemTheme": true,
   "layout": {
     "minWidth": 900,
-    "mode": "vertical-mix",
+    "mode": "horizontal-mix",
     "modeList": [
       {
         "value": "vertical",
@@ -51,20 +51,20 @@
     "#546e7a"
   ],
   "otherColor": {
-    "info": "#096dd9",
+    "info": "#2d7a34",
     "success": "#52c41a",
     "warning": "#faad14",
     "error": "#f5222d"
   },
   "isCustomizeInfoColor": false,
-  "fixedHeaderAndTab": false,
+  "fixedHeaderAndTab": true,
   "showReload": true,
   "header": {
     "inverted": false,
     "height": 50,
     "crumb": {
-      "visible": false,
-      "showIcon": false
+      "visible": true,
+      "showIcon": true
     }
   },
   "tab": {
@@ -81,7 +81,7 @@
         "label": "按钮风格"
       }
     ],
-    "isCache": true
+    "isCache": false
   },
   "sider": {
     "inverted": false,

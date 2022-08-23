@@ -2,7 +2,6 @@
   <dark-mode-container class="global-header flex-y-center h-full" :inverted="theme.header.inverted">
     <global-logo v-if="showLogo" :show-title="true" class="h-full" :style="{ width: theme.sider.width + 'px' }" />
     <div v-if="!showHeaderMenu" class="flex-1-hidden flex-y-center h-full">
-      <p class="header-desc pl-5">{{ title }}</p>
       <menu-collapse v-if="showMenuCollapse || isMobile" />
       <global-breadcrumb v-if="theme.header.crumb.visible && !isMobile" />
     </div>
@@ -52,9 +51,9 @@ defineProps<Props>();
 const theme = useThemeStore();
 const { isMobile } = useBasicLayout();
 
-const showButton = import.meta.env.CONFIG_BUTTON === 'Y';
+const showButton = import.meta.env.VITE_CONFIG_BUTTON === 'Y';
 
-const { VITE_APP_TITLE: title } = import.meta.env;
+// const { VITE_APP_TITLE: title } = import.meta.env;
 </script>
 
 <style scoped>

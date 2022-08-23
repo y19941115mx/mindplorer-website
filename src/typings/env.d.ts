@@ -47,8 +47,8 @@ interface ImportMetaEnv {
   readonly VITE_COMPRESS_TYPE?: 'gzip' | 'brotliCompress' | 'deflate' | 'deflateRaw';
   /** hash路由模式 */
   readonly VITE_HASH_ROUTE?: 'Y' | 'N';
-  /** 是否是部署的vercel */
-  readonly VITE_VERCEL?: 'Y' | 'N';
+  /** 是否显示配置按钮 */
+  readonly VITE_CONFIG_BUTTON?: 'Y' | 'N';
 }
 
 interface ImportMeta {
