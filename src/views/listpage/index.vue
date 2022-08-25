@@ -1,6 +1,6 @@
 <template>
-  <div class="">
-    <n-tabs justify-content="space-evenly" type="line">
+  <div class="p-x-50">
+    <n-tabs justify-content="center" type="line">
       <n-tab-pane v-for="(i, index) in tabs" :key="index" :name="index" :tab="i">
         <SearchWithTag></SearchWithTag>
         <tags-table class="my-3"></tags-table>

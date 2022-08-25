@@ -14,6 +14,9 @@
           </div>
         </div>
       </n-list-item>
+      <div class="flex-center">
+        <n-button quaternary type="primary" class="h-40px"> 更多 </n-button>
+      </div>
     </n-list>
   </div>
 </template>

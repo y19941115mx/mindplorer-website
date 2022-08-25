@@ -1,9 +1,14 @@
 <template>
   <div>
-    <n-card title="用户" :bordered="false" class="rounded-16px shadow-sm"> </n-card>
+    <div class="flex">
+      <detail-nav></detail-nav>
+      <detail-content class="flex-1-hidden pl10"></detail-content>
+    </div>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import detailContent from './components/DetailContent.vue';
+</script>
 
 <style scoped></style>
