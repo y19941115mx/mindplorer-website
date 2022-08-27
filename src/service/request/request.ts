@@ -10,6 +10,7 @@ interface RequestParam {
   url: string;
   method?: RequestMethod;
   data?: any;
+  params?: any;
   axiosConfig?: AxiosRequestConfig;
 }
 
@@ -49,8 +50,8 @@ export function createRequest(axiosConfig: AxiosRequestConfig, backendConfig?: S
    * @param url - 请求地址
    * @param config - axios配置
    */
-  function get<T>(url: string, config?: AxiosRequestConfig) {
-    return asyncRequest<T>({ url, method: 'get', axiosConfig: config });
+  function get<T>(url: string, params?: any, config?: AxiosRequestConfig) {
+    return asyncRequest<T>({ url, method: 'get', params, axiosConfig: config });
   }
 
   /**

@@ -5,7 +5,15 @@ const { url, urlPattern, secondUrl, secondUrlPattern } = getServiceEnvConfig(imp
 
 const isHttpProxy = import.meta.env.VITE_HTTP_PROXY === 'Y';
 
-export const request = createRequest({ baseURL: isHttpProxy ? urlPattern : url });
+export const request = createRequest(
+  { baseURL: isHttpProxy ? urlPattern : url },
+  {
+    codeKey: 'code',
+    dataKey: 'data',
+    msgKey: 'msg',
+    successCode: 0
+  }
+);
 
 export const secondRequest = createRequest({ baseURL: isHttpProxy ? secondUrlPattern : secondUrl });
 

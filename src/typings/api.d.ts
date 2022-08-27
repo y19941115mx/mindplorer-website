@@ -1,6 +1,14 @@
 // 后端接口返回的数据类型
 
 /** 后端返回的用户权益相关类型 */
+declare namespace Api {
+  interface ResponseBase {
+    id: number;
+    createdAt: string;
+    updatedAt: string;
+  }
+}
+
 declare namespace ApiAuth {
   /** 返回的token和刷新token */
   interface Token {
@@ -26,6 +34,22 @@ declare namespace ApiDemo {
   interface DataWithAdapter {
     dataId: string;
     dataName: string;
+  }
+}
+
+declare namespace ApiDictionary {
+  interface SysDictionaryDetail extends Api.ResponseBase {
+    label: string; // 展示值
+    value: string; // 字典值
+    sysDictionaryID: number; // 关联字段id
+    status: boolean; // 字典值状态
+  }
+  interface SysDictionary extends Api.ResponseBase {
+    name: string; // 字典名（中）
+    type: string; // 字典名（英）
+    status: boolean; // 状态
+    desc: string; // 描述
+    sysDictionaryDetails: SysDictionaryDetail[]; // 字典值
   }
 }
 
