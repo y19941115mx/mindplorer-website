@@ -3,17 +3,15 @@
     <n-grid-item span="0:24 640:24 1024:12">
       <n-card title="关键人物" :bordered="false" class="rounded-16px shadow-sm">
         <n-divider />
-        <div class="h-200px">
-          <card-box></card-box>
-        </div>
+        <!-- <div class="h-200px"> -->
+        <card-box></card-box>
+        <!-- </div> -->
       </n-card>
     </n-grid-item>
     <n-grid-item span="0:24 640:24 1024:12">
       <n-card title="关键社区" :bordered="false" class="rounded-16px shadow-sm">
         <n-divider />
-        <div class="h-200px">
-          <card-box></card-box>
-        </div>
+        <card-box></card-box>
       </n-card>
     </n-grid-item>
   </n-grid>

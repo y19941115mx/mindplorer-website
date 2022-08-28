@@ -1,7 +1,7 @@
 <template>
   <div>
     <span class="title pl-5">热门事件</span>
-    <n-grid cols="s:1 m:2 l:3" responsive="screen" :x-gap="50" :y-gap="15">
+    <n-grid cols="s:1 m:2 l:3" responsive="screen" :item-responsive="true" :x-gap="50" :y-gap="15">
       <n-grid-item>
         <EventSwiper></EventSwiper>
       </n-grid-item>

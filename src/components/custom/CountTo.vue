@@ -42,7 +42,7 @@ interface Props {
 
 const props = withDefaults(defineProps<Props>(), {
   startValue: 0,
-  endValue: 2021,
+  endValue: 2022,
   duration: 1500,
   autoplay: true,
   decimals: 0,

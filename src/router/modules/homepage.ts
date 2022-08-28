@@ -8,7 +8,8 @@ const homepage: AuthRoute.Route = {
     singleLayout: 'basic',
     permissions: ['super', 'admin', 'user'],
     icon: 'ic:round-home',
-    order: 0
+    order: 0,
+    keepAlive: true
   }
 };
 

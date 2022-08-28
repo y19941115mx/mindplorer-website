@@ -21,4 +21,13 @@
   color: rgba(44, 44, 44, 0.85);
   line-height: 22px;
 }
+
+.footer {
+  font-size: 14px;
+  font-family: Microsoft YaHei, Microsoft YaHei-Bold;
+  font-weight: normal;
+  text-align: LEFT;
+  color: #129d69;
+  line-height: 20px;
+}
 </style>

@@ -69,9 +69,9 @@ const tabData = ref<Message.Tab[]>([
     badgeProps: { type: 'warning' },
     list: [
       { id: 1, icon: 'ri:message-3-line', title: '你收到了5条新消息', date: '2022-06-17' },
-      { id: 4, icon: 'ri:message-3-line', title: 'Soybean Admin 1.0.0 版本正在筹备中', date: '2022-06-17' },
-      { id: 2, icon: 'ri:message-3-line', title: 'Soybean Admin 0.9.6 版本发布了', date: '2022-06-16' },
-      { id: 3, icon: 'ri:message-3-line', title: 'Soybean Admin 0.9.5 版本发布了', date: '2022-06-07' },
+      { id: 4, icon: 'ri:message-3-line', title: '测试 Admin 1.0.0 版本正在筹备中', date: '2022-06-17' },
+      { id: 2, icon: 'ri:message-3-line', title: '测试 Admin 0.9.6 版本发布了', date: '2022-06-16' },
+      { id: 3, icon: 'ri:message-3-line', title: '测试 Admin 0.9.5 版本发布了', date: '2022-06-07' },
       {
         id: 5,
         icon: 'ri:message-3-line',
@@ -89,36 +89,36 @@ const tabData = ref<Message.Tab[]>([
         id: 1,
         title: '项目动态',
         svgIcon: 'avatar',
-        description: 'Soybean 刚才把工作台页面随便写了一些，凑合能看了！',
-        date: '2021-11-07 22:45:32'
+        description: '测试 刚才把工作台页面随便写了一些，凑合能看了！',
+        date: '2022-11-07 22:45:32'
       },
       {
         id: 2,
         title: '项目动态',
         svgIcon: 'avatar',
-        description: 'Soybean 正在忙于为soybean-admin写项目说明文档！',
-        date: '2021-11-03 20:33:31'
+        description: '测试 正在忙于为写项目说明文档！',
+        date: '2022-11-03 20:33:31'
       },
       {
         id: 3,
         title: '项目动态',
         svgIcon: 'avatar',
-        description: 'Soybean 准备为soybean-admin 1.0的发布做充分的准备工作！',
-        date: '2021-10-31 22:43:12'
+        description: '测试',
+        date: '2022-10-31 22:43:12'
       },
       {
         id: 4,
         title: '项目动态',
         svgIcon: 'avatar',
-        description: '@yanbowe 向soybean-admin提交了一个bug，多标签栏不会自适应。',
-        date: '2021-10-27 10:24:54'
+        description: '测试',
+        date: '2022-10-27 10:24:54'
       },
       {
         id: 5,
         title: '项目动态',
         svgIcon: 'avatar',
-        description: 'Soybean 在2021年5月28日创建了开源项目soybean-admin！',
-        date: '2021-05-28 22:22:22'
+        description: '测试 在2022年8月28日创建了项目！',
+        date: '2022-08-28 22:22:22'
       }
     ]
   },
