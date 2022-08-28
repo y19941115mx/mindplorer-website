@@ -24,7 +24,7 @@
         <n-divider />
       </n-card>
 
-      <n-card title="社交网络关键词">
+      <n-card title="聚合标签">
         <div class="avatar_bg w-250px h-215px flex-col-center mb-10 border">
           <n-avatar :size="100" src="https://07akioni.oss-cn-beijing.aliyuncs.com/07akioni.jpeg" />
         </div>
