@@ -50,8 +50,8 @@ export function createRequest(axiosConfig: AxiosRequestConfig, backendConfig?: S
    * @param url - 请求地址
    * @param config - axios配置
    */
-  function get<T>(url: string, params?: any, config?: AxiosRequestConfig) {
-    return asyncRequest<T>({ url, method: 'get', params, axiosConfig: config });
+  function get<T>(url: string, config?: AxiosRequestConfig) {
+    return asyncRequest<T>({ url, method: 'get', axiosConfig: config });
   }
 
   /**
@@ -196,7 +196,7 @@ async function getRequestResponse(
   config?: AxiosRequestConfig
 ) {
   let res: any;
-  if (method === 'get' || method === 'delete') {
+  if (method === 'delete' || method === 'get') {
     res = await instance[method](url, config);
   } else {
     res = await instance[method](url, data, config);

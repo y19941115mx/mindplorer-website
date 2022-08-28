@@ -40,7 +40,7 @@ declare namespace ApiDemo {
 declare namespace ApiDictionary {
   interface SysDictionaryDetail extends Api.ResponseBase {
     label: string; // 展示值
-    value: string; // 字典值
+    value: number; // 字典值
     sysDictionaryID: number; // 关联字段id
     status: boolean; // 字典值状态
   }
@@ -50,6 +50,9 @@ declare namespace ApiDictionary {
     status: boolean; // 状态
     desc: string; // 描述
     sysDictionaryDetails: SysDictionaryDetail[]; // 字典值
+  }
+  interface SysDictionaryData {
+    resysDictionary: SysDictionary;
   }
 }
 

@@ -1,5 +1,8 @@
 import { nextTick } from 'vue';
 import { defineStore } from 'pinia';
+import { fetchDictinary } from '@/service';
+
+type SysDictionary = Record<string, ApiDictionary.SysDictionaryDetail[]>;
 
 interface AppState {
   /** 重载页面(控制页面的显示) */
@@ -10,6 +13,7 @@ interface AppState {
   siderCollapse: boolean;
   /** vertical-mix模式下 侧边栏的固定状态 */
   mixSiderFixed: boolean;
+  sysDictionary: SysDictionary;
 }
 
 export const useAppStore = defineStore('app-store', {
@@ -17,7 +21,8 @@ export const useAppStore = defineStore('app-store', {
     reloadFlag: true,
     settingDrawerVisible: false,
     siderCollapse: true,
-    mixSiderFixed: false
+    mixSiderFixed: false,
+    sysDictionary: {}
   }),
   actions: {
     /**
@@ -65,6 +70,21 @@ export const useAppStore = defineStore('app-store', {
     /** 设置 vertical-mix模式下 侧边栏的固定状态 */
     toggleMixSiderFixed() {
       this.mixSiderFixed = !this.mixSiderFixed;
+    },
+    /** 获取和更新全局数据字典 */
+    async getDictinary(typeStr: string) {
+      if (this.sysDictionary[typeStr]) {
+        return;
+      }
+
+      const { data } = await fetchDictinary(typeStr);
+      if (data) {
+        const dictionaryDetails = data.resysDictionary.sysDictionaryDetails;
+        const dictionary: SysDictionary = {};
+        dictionary[typeStr] = dictionaryDetails;
+        // 更新状态
+        this.sysDictionary = { ...this.sysDictionary, ...dictionary };
+      }
     }
   }
 });

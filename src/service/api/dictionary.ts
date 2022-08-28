@@ -5,6 +5,6 @@
  */
 import { request } from '../request';
 
-export function getDictinary(type: string) {
-  return request.get<ApiDictionary.SysDictionary>('/getSmsCode', { type });
+export function fetchDictinary(type: string) {
+  return request.get<ApiDictionary.SysDictionaryData>('/sysDictionary/findSysDictionary', { params: { type } });
 }
