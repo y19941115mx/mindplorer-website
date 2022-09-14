@@ -13,6 +13,7 @@ interface AppState {
   siderCollapse: boolean;
   /** vertical-mix模式下 侧边栏的固定状态 */
   mixSiderFixed: boolean;
+  /** 系统字典 */
   sysDictionary: SysDictionary;
 }
 
