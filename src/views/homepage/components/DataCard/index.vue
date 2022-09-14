@@ -28,13 +28,13 @@
 </template>
 
 <script setup lang="ts">
+import { ref, watch } from 'vue';
 import { Icon } from '@iconify/vue';
 import { useThemeStore } from '@/store';
 import { GradientBg } from './components';
 
 defineOptions({ name: 'HomepageDataCard' });
 
-const theme = useThemeStore();
 interface CardData {
   id: string;
   title: string;
@@ -43,7 +43,17 @@ interface CardData {
   icon: string;
 }
 
-const cardData: CardData[] = [
+interface Props {
+  dataList?: ApiHomepage.StatisData[];
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  dataList: undefined
+});
+
+const theme = useThemeStore();
+
+const cardData = ref<CardData[]>([
   {
     id: 'user',
     title: '用户数据',
@@ -65,10 +75,19 @@ const cardData: CardData[] = [
     prefix: ['系统总量', '热点事件', '谣言判定'],
     icon: 'ant-design:file-done-outlined'
   }
-];
+]);
+
+watch(
+  () => props.dataList,
+  () => {
+    for (let index = 0; index < cardData.value.length; index++) {
+      const element = cardData.value[index];
+
+      const data = props.dataList[index];
+      element.value = [data.TotalNum, data.IncreaseNum, data.EventNum];
+    }
+  }
+);
 </script>
 
-<style scoped>
-.icon-layout {
-}
-</style>
+<style scoped></style>

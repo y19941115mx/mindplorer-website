@@ -1,7 +1,7 @@
 /**
  * 获取全局数据字典
  * @param type - 字典的英文名
- * @returns - 返回boolean值表示是否发送成功
+ * @returns - 返回 SysDictionaryData 数据
  */
 import { request } from '../request';
 

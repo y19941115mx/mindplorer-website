@@ -56,6 +56,17 @@ declare namespace ApiDictionary {
   }
 }
 
+declare namespace ApiHomepage {
+  interface StatisData {
+    TotalNum: number;
+    IncreaseNum: number;
+    EventNum: number;
+  }
+  interface HomePageResult {
+    StatisDataList: StatisData[];
+  }
+}
+
 declare namespace ApiUserManagement {
   interface UserTable {
     /** 用户id */
